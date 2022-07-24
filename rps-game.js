@@ -4,10 +4,10 @@ function getComputerChoice() {
     return playChoices[randomPlayChoice]; 
 } //so computer choice can choose random between the three
 
-function oneRound() {
+function playRound(playerSelection, computerSelection) {
     let playerSelectionVirgin = prompt("what are you playing?","rock"); //enter in player's move
-    let playerSelection = playerSelectionVirgin.charAt(0).toUpperCase() + playerSelectionVirgin.slice(1).toLowerCase(); //insensitive to cap
-    let computerSelection = getComputerChoice();
+    playerSelection = playerSelectionVirgin.charAt(0).toUpperCase() + playerSelectionVirgin.slice(1).toLowerCase(); //insensitive to cap
+    computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
         return computerSelection + " " + playerSelection + " " +  "it's a tie!" + tie(); 
     } else if ((playerSelection == "Paper" 
@@ -39,14 +39,14 @@ let playerScore = 0;
 let computerScore = 0;
 function playerWins() { //player wins a point and shows score
     playerScore+= 1;
-    return "\n Score: \n You: " + playerScore + " Computer: " + computerScore;
+    return "\n Score: \nYou: " + playerScore + " Computer: " + computerScore;
 }
 function computerWins() { //computer  wins a point and shows score
     computerScore += 1;
-    return "\n Score: \n You: " + playerScore + " Computer: " + computerScore;
+    return "\n Score: \nYou: " + playerScore + " Computer: " + computerScore;
 }
 function tie() {// shows score
-    return "\n Score: \n You: " + playerScore + " Computer: " + computerScore
+    return "\n Score: \nYou: " + playerScore + " Computer: " + computerScore
 }
 
 function score() {
@@ -60,10 +60,9 @@ function score() {
 }
 function game() {
     for (let i = 1;; i++) {
-      rounds = "round "+ i + ": "+ oneRound();
+      rounds = "round "+ i + ": "+ playRound();
       console.log(rounds);
     }
     console.log(score())
     
 }
-game()
