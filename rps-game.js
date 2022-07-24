@@ -59,7 +59,7 @@ function score() {
     }
 }
 function game() {
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1;; i++) {
       rounds = "round "+ i + ": "+ oneRound();
       console.log(rounds);
     }
