@@ -4,19 +4,25 @@ function getComputerChoice() {
     return playChoices[randomPlayChoice]; 
 } //so computer choice can choose random between the three
 
+let playerSelection;
+
+function getId(button) {
+    playerSelection = button.id;
+    return playRound(playerSelection, );
+}
+
 function playRound(playerSelection, computerSelection) {
-    let playerSelectionVirgin = prompt("what are you playing?","rock"); //enter in player's move
-    playerSelection = playerSelectionVirgin.charAt(0).toUpperCase() + playerSelectionVirgin.slice(1).toLowerCase(); //insensitive to cap
+
     computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
-        return computerSelection + " " + playerSelection + " " +  "it's a tie!" + tie(); 
+        console.log(computerSelection + " " + playerSelection + " " +  "it's a tie!" + tie()); 
     } else if ((playerSelection == "Paper" 
     && computerSelection === "Scissors") 
     || (playerSelection == "Rock"
     && computerSelection ==="Paper")
     ||(playerSelection =="Scissors" 
     && computerSelection === "Rock")) {
-        return "You lose!" + " " + computerSelection + " beats " + playerSelection + computerWins();    
+        console.log("You lose!" + " " + computerSelection + " beats " + playerSelection + computerWins());    
     }// player loses 
     else if ((playerSelection == "Paper"
     && computerSelection === "Rock")
@@ -24,10 +30,10 @@ function playRound(playerSelection, computerSelection) {
     && computerSelection === "Scissors")
     || (playerSelection == "Scissors" 
     && computerSelection === "Paper")) {
-        return "You win!"  + " " + playerSelection + " beats " + computerSelection + playerWins();
+        console.log("You win!"  + " " + playerSelection + " beats " + computerSelection + playerWins());
     }//player wins
     else {
-        return "error";
+        console.log("error" + playerSelection);
     }
 }
 
