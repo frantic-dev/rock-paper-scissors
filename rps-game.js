@@ -8,21 +8,25 @@ let playerSelection;
 
 function getId(button) {
     playerSelection = button.id;
-    return playRound(playerSelection, );
+    return displayResult(playRound(playerSelection, ));
+}
+function displayResult(fct) {
+    const result = document.querySelector('#result');
+    result.innerHTML = fct;
 }
 
 function playRound(playerSelection, computerSelection) {
 
     computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
-        console.log(computerSelection + " " + playerSelection + " " +  "it's a tie!" + tie()); 
+        return computerSelection + " " + playerSelection + "<br>" +  "it's a tie!" + tie(); 
     } else if ((playerSelection == "Paper" 
     && computerSelection === "Scissors") 
     || (playerSelection == "Rock"
     && computerSelection ==="Paper")
     ||(playerSelection =="Scissors" 
     && computerSelection === "Rock")) {
-        console.log("You lose!" + " " + computerSelection + " beats " + playerSelection + computerWins());    
+        return "You lose!" + "<br>" + computerSelection + " beats " + playerSelection + "<br>"+ computerWins();    
     }// player loses 
     else if ((playerSelection == "Paper"
     && computerSelection === "Rock")
@@ -30,10 +34,10 @@ function playRound(playerSelection, computerSelection) {
     && computerSelection === "Scissors")
     || (playerSelection == "Scissors" 
     && computerSelection === "Paper")) {
-        console.log("You win!"  + " " + playerSelection + " beats " + computerSelection + playerWins());
+        return "You win!"  + "<br>" + playerSelection + " beats " + computerSelection +"<br>"+ playerWins();
     }//player wins
     else {
-        console.log("error" + playerSelection);
+        return "error" + playerSelection;
     }
 }
 
