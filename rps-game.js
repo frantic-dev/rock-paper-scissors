@@ -8,18 +8,18 @@ let playerSelection;
 
 function getId(button) {
     playerSelection = button.id;
-    return displayResult(playRound(playerSelection, ));
+    game(playerSelection);
 }
 function displayResult(fct) {
     const result = document.querySelector('#result');
-    result.innerHTML = fct;
+    return result.innerHTML = fct;
 }
 
 function playRound(playerSelection, computerSelection) {
 
     computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
-        return computerSelection + " " + playerSelection + "<br>" +  "it's a tie!" + tie(); 
+        return  "it's a tie!" + "<br>" +computerSelection + " " + playerSelection +  "<br>" + tie(); 
     } else if ((playerSelection == "Paper" 
     && computerSelection === "Scissors") 
     || (playerSelection == "Rock"
@@ -55,24 +55,33 @@ function computerWins() { //computer  wins a point and shows score
     computerScore += 1;
     return "\n Score: \nYou: " + playerScore + " Computer: " + computerScore;
 }
-function tie() {// shows score
+function tie() {// shows score when tie
     return "\n Score: \nYou: " + playerScore + " Computer: " + computerScore
 }
 
-function score() {
+function result() {    //result of the whole game at end
     if(playerScore > computerScore) {
         return "You win! Congratulations!!"
     } else if (playerScore < computerScore) {
-        return 'You lose! My condolences.'
+        return "You lose! My condolences."
     } else {
         return "A tie! Crazy!!"
     }
 }
-function game() {
-    for (let i = 1;; i++) {
-      rounds = "round "+ i + ": "+ playRound();
-      console.log(rounds);
+let i =  1 ;
+function game(playerSelection, ) { 
+    rounds = "round "+ i + ": "+ playRound(playerSelection,  );
+    if (playerScore < 5 && computerScore < 5) {
+    displayResult(rounds);  
+    i++;
+    } else if (playerScore == 5 || computerScore == 5) {
+    displayResult(rounds+= "<br>" +result());
+    restart();
     }
-    console.log(score())
     
+}
+function restart() { //reboots scores
+    i = 1;
+    computerScore = 0;
+    playerScore = 0;
 }
