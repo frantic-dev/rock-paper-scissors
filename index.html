@@ -5,19 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/6eb20c383e.js" crossorigin="anonymous"></script>
+    <script src="rps-game.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <button id="Rock" onclick="getId(this)">
-        <i class="fa-regular fa-hand-back-fist fa-10x fa-rotate-90"></i>
-    </button>
-    <button id="Paper" onclick="getId(this)">
-        <i class="fa-regular fa-note-sticky fa-10x"></i>
-    </button>
-    <button id="Scissors" onclick="getId(this)">
-        <i class="fa-regular fa-hand-scissors fa-10x"></i>
-    </button>
+    <header>
+       
+        <img  id="banner" src="https://aguirre.github.io/RPS-Multiplayer/assets/images/rps.png" alt="image of Rock Paper Scissors">
+        <h1>Rock Paper Scissors</h1>
+    </header>
     <div id="result"></div>
-    <script src="rps-game.js"></script>
+    <div id="container">
+        <button id="Rock" onclick="getId(this)">
+            <i class="fa-regular fa-hand-back-fist fa-rotate-90"></i>
+        </button>
+        <button id="Paper" onclick="getId(this)">
+            <i class="fa-regular fa-note-sticky"></i>
+        </button>
+        <button id="Scissors" onclick="getId(this)">
+            <i class="fa-regular fa-hand-scissors"></i>
+        </button>
+    </div>
+    
+    
 </body>
 </html>

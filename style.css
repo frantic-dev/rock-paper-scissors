@@ -1,0 +1,52 @@
+body {
+    width: 70%;
+    margin: auto;
+    background-color: rgb(6, 8, 5);
+    background-image: url('http://assets.stickpng.com/images/5873853ff3a71010b5e8ef3e.png');
+    background-size: 30%;
+
+}
+h1 {
+    text-align: center;
+    position: relative;
+    bottom: 1rem;
+    font-family: 'Righteous', sans-serif;
+    font-size: 3.7rem;
+    margin: 0;
+    color: rgb(26, 117, 26);
+    text-shadow: 2.5px 2.5px rgba(255, 238, 0, 0.87);
+
+}
+#banner {
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+#container {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: 4rem;
+    display: flex; 
+    justify-content: space-around;
+}
+button {
+    background-color: rgba(251, 255, 21, 0.884);
+    border: 2px solid rgba(0, 0, 0, 0.815);
+    border-radius: 5px;
+    margin: 10px;
+}
+button:hover {
+    background-color: rgb(180, 196, 37);
+}
+.fa-regular {
+    padding: 1rem;
+    font-size: 6em;
+    color: rgb(0, 0, 0);
+}
+.fa-regular:hover {
+    color:aliceblue;
+}
+#result {
+    color: aliceblue;
+}
