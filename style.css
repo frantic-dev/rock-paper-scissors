@@ -1,8 +1,8 @@
 body {
-    width: 70%;
+
     margin: auto;
-    background-color: rgb(6, 8, 5);
-    background-image: url('http://assets.stickpng.com/images/5873853ff3a71010b5e8ef3e.png');
+    background-color: rgb(19, 16, 16);
+    background-image: url('/image/5873853ff3a71010b5e8ef3e.png');
     background-size: 30%;
 
 }
@@ -13,20 +13,18 @@ h1 {
     font-family: 'Righteous', sans-serif;
     font-size: 3.7rem;
     margin: 0;
-    color: rgb(26, 117, 26);
+    color: rgb(53, 124, 6);
     text-shadow: 2.5px 2.5px rgba(255, 238, 0, 0.87);
 
 }
 #banner {
     display: block;
     margin: auto;
-    width: 70%;
+    width: 35%;
 }
 #container {
-    width: 50%;
-    margin: auto;
-    position: relative;
-    top: 4rem;
+    width: 40%;
+    margin: 17px auto;
     display: flex; 
     justify-content: space-around;
 }
@@ -39,6 +37,10 @@ button {
 button:hover {
     background-color: rgb(180, 196, 37);
 }
+button:active {
+    background-color: yellow;
+    border-color:  white;
+}    
 .fa-regular {
     padding: 1rem;
     font-size: 6em;
@@ -47,6 +49,33 @@ button:hover {
 .fa-regular:hover {
     color:aliceblue;
 }
-#result {
+.fa-regular:active {
+    color: green;
+}
+#space {
+    height: 144px;
+    width: auto;
+}
+#round-number {
+    font-family: 'space mono', 'Franklin Gothic Medium';
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 0 0 18px yellow;
+    margin-left: 3em;
     color: aliceblue;
 }
+#result {
+    text-align: center;
+    font-size: 27px;
+    font-family: 'rubik', sans-serif;
+    margin-bottom: 2rem;
+    color:aliceblue;
+    padding-bottom: 30px;
+}
+#final-score {
+    font-size: 40px;
+    font-family: 'secular one', sans-serif;
+    text-align: center;
+    color: rgb(249, 255, 247);
+    text-shadow: 0 0 18px rgb(21, 255, 0);

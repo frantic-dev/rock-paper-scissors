@@ -10,10 +10,7 @@ function getId(button) {
     playerSelection = button.id;
     game(playerSelection);
 }
-function displayResult(fct) {
-    const result = document.querySelector('#result');
-    return result.innerHTML = fct;
-}
+
 
 function playRound(playerSelection, computerSelection) {
 
@@ -59,23 +56,39 @@ function tie() {// shows score when tie
     return "\n Score: \nYou: " + playerScore + " Computer: " + computerScore
 }
 
-function result() {    //result of the whole game at end
+function finalScore() {    //result of the whole game at end
     if(playerScore > computerScore) {
-        return "You win! Congratulations!!"
+        return "You win! Congratulations!! :)"
     } else if (playerScore < computerScore) {
-        return "You lose! My condolences."
+        return "You lose! My condolences. T o T"
     } else {
         return "A tie! Crazy!!"
     }
 }
+
+// function displayResult(fct) {
+//     const result = document.querySelector('#result');
+//     return result.innerHTML = fct;
+// }
+const result = document.querySelector('#result');
+const roundNumber = document.querySelector("#round-number");
+const finScore = document.querySelector('#final-score')
+
+function display(round, roundNum,fScore) {   
+     result.innerHTML = round;
+     roundNumber.innerHTML = roundNum;
+     finScore.innerHTML = fScore;
+}
+
 let i =  1 ;
 function game(playerSelection, ) { 
-    rounds = "round "+ i + ": "+ playRound(playerSelection,  );
+    roundNum = "Round "+ i + " : "; 
+    rounds = playRound(playerSelection,  );
     if (playerScore < 5 && computerScore < 5) {
-    displayResult(rounds);  
+    display(rounds, roundNum, null);  
     i++;
     } else if (playerScore == 5 || computerScore == 5) {
-    displayResult(rounds+= "<br>" +result());
+    display(rounds, roundNum, finalScore());
     restart();
     }
     

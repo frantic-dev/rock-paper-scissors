@@ -7,16 +7,19 @@
     <script src="https://kit.fontawesome.com/6eb20c383e.js" crossorigin="anonymous"></script>
     <script src="rps-game.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Rubik:wght@500&family=Secular+One&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="/image/hand-fist-solid.svg">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
     <header>
-       
         <img  id="banner" src="https://aguirre.github.io/RPS-Multiplayer/assets/images/rps.png" alt="image of Rock Paper Scissors">
         <h1>Rock Paper Scissors</h1>
     </header>
-    <div id="result"></div>
+    <div id="space">
+        <div id="round-number"></div>
+        <div id="result"></div>
+    </div>
     <div id="container">
         <button id="Rock" onclick="getId(this)">
             <i class="fa-regular fa-hand-back-fist fa-rotate-90"></i>
@@ -28,6 +31,7 @@
             <i class="fa-regular fa-hand-scissors"></i>
         </button>
     </div>
+    <div id="final-score"></div>
     
     
 </body>
