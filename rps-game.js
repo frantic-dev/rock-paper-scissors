@@ -66,10 +66,7 @@ function finalScore() {    //result of the whole game at end
     }
 }
 
-// function displayResult(fct) {
-//     const result = document.querySelector('#result');
-//     return result.innerHTML = fct;
-// }
+
 const result = document.querySelector('#result');
 const roundNumber = document.querySelector("#round-number");
 const finScore = document.querySelector('#final-score')
@@ -81,7 +78,7 @@ function display(round, roundNum,fScore) {
 }
 
 let i =  1 ;
-function game(playerSelection, ) { 
+function game(playerSelection, ) { // display the game
     roundNum = "Round "+ i + " : "; 
     rounds = playRound(playerSelection,  );
     if (playerScore < 5 && computerScore < 5) {
