@@ -102,3 +102,39 @@ a:active {
     color: aliceblue;
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 600px) {
+    html {
+        height: 100%;
+    }
+    #banner {
+        width: 60%;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .fa-regular:not(.fa-copyright) {
+        font-size: 50px;
+    }
+    #round-number {
+        margin-left: 10px;
+    }
+    #round-number, #result, #final-score {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 35px;
+    }
+    .fa-regular:not(.fa-copyright) {
+        font-size: 35px;
+        padding: 10px;
+    }
+    button {
+        margin: 0 5px;
+    }
+    #round-number, #result, #final-score {
+        font-size: 19px;
+    }
+}
