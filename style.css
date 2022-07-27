@@ -1,0 +1,140 @@
+html {
+    height: 100%;
+}
+body {
+    margin: auto;
+    /* background-color: rgb(19, 16, 16); */
+    background-image: url('/image/5873853ff3a71010b5e8ef3e.png'), linear-gradient(black , rgb(37, 37, 37));
+    background-size: 40%;
+}
+h1 {
+    text-align: center;
+    position: relative;
+    bottom: 1rem;
+    font-family: 'Righteous', sans-serif;
+    font-size: 3.7rem;
+    margin: 0;
+    color: rgb(53, 124, 6);
+    text-shadow: 2.5px 2.5px rgba(255, 238, 0, 0.87);
+
+}
+#banner {
+    display: block;
+    margin: auto;
+    width: 35%;
+}
+#container {
+    width: 40%;
+    margin: 17px auto;
+    display: flex; 
+    justify-content: space-around;
+}
+button {
+    background-color: rgba(251, 255, 21, 0.884);
+    border: 2px solid rgba(0, 0, 0, 0.815);
+    border-radius: 5px;
+    margin: 0 10px;
+}
+button:hover {
+    background-color: rgb(180, 196, 37);
+}
+button:active {
+    background-color: yellow;
+    border-color:  white;
+}    
+.fa-regular:not(.fa-copyright) {
+    padding: 1rem;
+    font-size: 6em;
+    color: rgb(0, 0, 0);
+}
+.fa-regular:hover {
+    color:aliceblue;
+}
+.fa-regular:active {
+    color: green;
+}
+#space {
+    height: 144px;
+    width: auto;
+}
+#round-number {
+    font-family: 'space mono', 'Franklin Gothic Medium';
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 0 0 18px yellow;
+    margin-left: 3em;
+    color: aliceblue;
+}
+#result {
+    text-align: center;
+    font-size: 27px;
+    font-family: 'rubik', sans-serif;
+    margin-bottom: 2rem;
+    color:aliceblue;
+    padding-bottom: 25px;
+}
+#final-score {
+    font-size: 40px;
+    font-family: 'secular one', sans-serif;
+    text-align: center;
+    color: rgb(249, 255, 247);
+    text-shadow: 0 0 18px rgb(21, 255, 0);
+} 
+footer {
+    color: aliceblue;
+    background-color: rgba(58, 54, 1, 0.95);
+    font-size: 17px;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+a:hover {
+    color:rgb(230, 255, 4)
+}
+a:active {
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        height: 100%;
+    }
+    #banner {
+        width: 60%;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .fa-regular:not(.fa-copyright) {
+        font-size: 50px;
+    }
+    #round-number {
+        margin-left: 10px;
+    }
+    #round-number, #result, #final-score {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 35px;
+    }
+    .fa-regular:not(.fa-copyright) {
+        font-size: 35px;
+        padding: 10px;
+    }
+    button {
+        margin: 0 5px;
+    }
+    #round-number, #result, #final-score {
+        font-size: 19px;
+    }
+}

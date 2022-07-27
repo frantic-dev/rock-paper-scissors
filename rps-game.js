@@ -8,18 +8,15 @@ let playerSelection;
 
 function getId(button) {
     playerSelection = button.id;
-    return displayResult(playRound(playerSelection, ));
+    game(playerSelection);
 }
-function displayResult(fct) {
-    const result = document.querySelector('#result');
-    result.innerHTML = fct;
-}
+
 
 function playRound(playerSelection, computerSelection) {
 
     computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
-        return computerSelection + " " + playerSelection + "<br>" +  "it's a tie!" + tie(); 
+        return  "it's a tie!" + "<br>" +computerSelection + " " + playerSelection +  "<br>" + tie(); 
     } else if ((playerSelection == "Paper" 
     && computerSelection === "Scissors") 
     || (playerSelection == "Rock"
@@ -55,24 +52,46 @@ function computerWins() { //computer  wins a point and shows score
     computerScore += 1;
     return "\n Score: \nYou: " + playerScore + " Computer: " + computerScore;
 }
-function tie() {// shows score
+function tie() {// shows score when tie
     return "\n Score: \nYou: " + playerScore + " Computer: " + computerScore
 }
 
-function score() {
+function finalScore() {    //result of the whole game at end
     if(playerScore > computerScore) {
-        return "You win! Congratulations!!"
+        return "You win! Congratulations!! :)"
     } else if (playerScore < computerScore) {
-        return 'You lose! My condolences.'
+        return "You lose! My condolences. T o T"
     } else {
         return "A tie! Crazy!!"
     }
 }
-function game() {
-    for (let i = 1;; i++) {
-      rounds = "round "+ i + ": "+ playRound();
-      console.log(rounds);
+
+
+const result = document.querySelector('#result');
+const roundNumber = document.querySelector("#round-number");
+const finScore = document.querySelector('#final-score')
+
+function display(round, roundNum,fScore) {   
+     result.innerHTML = round;
+     roundNumber.innerHTML = roundNum;
+     finScore.innerHTML = fScore;
+}
+
+let i =  1 ;
+function game(playerSelection, ) { // display the game
+    roundNum = "Round "+ i + " : "; 
+    rounds = playRound(playerSelection,  );
+    if (playerScore < 5 && computerScore < 5) {
+    display(rounds, roundNum, null);  
+    i++;
+    } else if (playerScore == 5 || computerScore == 5) {
+    display(rounds, roundNum, finalScore());
+    restart();
     }
-    console.log(score())
     
+}
+function restart() { //reboots scores
+    i = 1;
+    computerScore = 0;
+    playerScore = 0;
 }
