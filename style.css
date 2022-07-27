@@ -4,7 +4,7 @@ html {
 body {
     margin: auto;
     /* background-color: rgb(19, 16, 16); */
-    background-image: url('/image/5873853ff3a71010b5e8ef3e.png'), linear-gradient(black , rgb(37, 37, 37));
+    background-image: url('http://assets.stickpng.com/images/5873853ff3a71010b5e8ef3e.png'), linear-gradient(black , rgb(37, 37, 37));
     background-size: 40%;
 }
 h1 {
